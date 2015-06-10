@@ -18,8 +18,8 @@
 en:
   js:
     share:
-      topic: 'share a link to this topic'
-      post: 'post #%{postNumber}'
+      topic: 'share a link to this question'
+      post: 'answer #%{postNumber}'
       close: 'close'
       twitter: 'share this link on Twitter'
       facebook: 'share this link on Facebook'
