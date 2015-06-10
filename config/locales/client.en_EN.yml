@@ -999,6 +999,14 @@ en:
 
     browser_update: 'Unfortunately, <a href="http://www.discourse.org/faq/#browser">your browser is too old to work on this site</a>. Please <a href="http://browsehappy.com">upgrade your browser</a>.'
 
+  # This section is exported to the javascript for i18n in the admin section
+  admin_js:
+    admin:
+      flags:
+        title: "Flags"
+        old: "Old"
+        active: "Active"
+
         agree: "Agree"
         agree_title: "Confirm this flag as valid and correct"
         agree_flag_modal_title: "Agree and..."
