@@ -1,0 +1,5 @@
+en_EB:
+  admin_js:
+    admin:
+      dashboard:
+        title: "Dashboard (en_EN OVERRIDE TEST)"
