@@ -1,5 +1,1222 @@
-en_EB:
-  admin_js:
-    admin:
-      dashboard:
-        title: "Dashboard (en_EN OVERRIDE TEST)"
+# encoding: utf-8
+# This file contains content for the client portion of Discourse, sent out
+# to the Javascript app.
+#
+# To work with us on translations, see:
+# https://www.transifex.com/projects/p/discourse-org/
+#
+# This is a "source" file, which is used by Transifex to get translations for other languages.
+# After this file is changed, it needs to be pushed by a maintainer to Transifex:
+#
+#   tx push -s
+#
+# Read more here: https://meta.discourse.org/t/contribute-a-translation-to-discourse/14882
+#
+# To validate this YAML file after you change it, please paste it into
+# http://yamllint.com/
+
+en:
+  js:
+    share:
+      topic: 'share a link to this topic'
+      post: 'post #%{postNumber}'
+      close: 'close'
+      twitter: 'share this link on Twitter'
+      facebook: 'share this link on Facebook'
+      google+: 'share this link on Google+'
+      email: 'send this link in an email'
+
+    topic_admin_menu: "question admin actions"
+
+    emails_are_disabled: "All outgoing email has been globally disabled by an administrator. No email notifications of any kind will be sent."
+
+    edit: 'edit the title and topic of this question'
+
+    suggested_topics:
+      title: "Suggested Questions"
+
+    bookmarked:
+      title: "Bookmark"
+      clear_bookmarks: "Clear Bookmarks"
+      help:
+        bookmark: "Click to bookmark the first answer on this question"
+        unbookmark: "Click to remove all bookmarks in this question"
+
+    bookmarks:
+      not_logged_in: "sorry, you must be logged in to bookmark answers"
+      created: "you've bookmarked this answer"
+      not_bookmarked: "you've read this answer; click to bookmark it"
+      last_read: "this is the last answer you've read; click to bookmark it"
+      remove: "Remove Bookmark"
+      confirm_clear: "Are you sure you want to clear all the bookmarks from this question?"
+
+    topic_count_latest:
+      one: "{{count}} new or updated question."
+      other: "{{count}} new or updated questions."
+
+    topic_count_unread:
+      one: "{{count}} unread question."
+      other: "{{count}} unread questions."
+
+    topic_count_new:
+      one: "{{count}} new question."
+      other: "{{count}} new questions."
+
+    choose_topic:
+      none_found: "No questions found."
+      title:
+        search: "Search for a Question by name, url or id:"
+        placeholder: "type the question title here"
+
+    queue:
+      topic: "Question:"
+      approve: 'Approve'
+      reject: 'Reject'
+      delete_user: 'Delete User'
+      title: "Needs Approval"
+      none: "There are no answers to review."
+      edit: "Edit"
+      cancel: "Cancel"
+      view_pending: "view pending answers"
+      has_pending_posts:
+        one: "This question has <b>1</b> answer awaiting approval"
+        many: "This question has <b>{{count}}</b> answers awaiting approval"
+
+      confirm: "Save Changes"
+      delete_prompt: "Are you sure you want to delete <b>%{username}</b>? This will remove all of their answers and block their email and ip address."
+
+      approval:
+        title: "Answer Needs Approval"
+        description: "We've received your new answer but it needs to be approved by a moderator before it will appear. Please be patient."
+        pending_posts:
+          one: "You have <strong>1</strong> answer pending."
+          other: "You have <strong>{{count}}</strong> answers pending."
+        ok: "OK"
+
+    user_action:
+      user_posted_topic: "<a href='{{userUrl}}'>{{user}}</a> asked <a href='{{topicUrl}}'>the question</a>"
+      you_posted_topic: "<a href='{{userUrl}}'>You</a> asked <a href='{{topicUrl}}'>the question</a>"
+      user_replied_to_post: "<a href='{{userUrl}}'>{{user}}</a> replied to <a href='{{postUrl}}'>{{post_number}}</a>"
+      you_replied_to_post: "<a href='{{userUrl}}'>You</a> replied to <a href='{{postUrl}}'>{{post_number}}</a>"
+      user_replied_to_topic: "<a href='{{userUrl}}'>{{user}}</a> replied to <a href='{{topicUrl}}'>the question</a>"
+      you_replied_to_topic: "<a href='{{userUrl}}'>You</a> replied to <a href='{{topicUrl}}'>the question</a>"
+
+      user_mentioned_user: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>{{another_user}}</a>"
+      user_mentioned_you: "<a href='{{user1Url}}'>{{user}}</a> mentioned <a href='{{user2Url}}'>you</a>"
+      you_mentioned_user: "<a href='{{user1Url}}'>You</a> mentioned <a href='{{user2Url}}'>{{another_user}}</a>"
+
+      posted_by_user: "Answered by <a href='{{userUrl}}'>{{user}}</a>"
+      posted_by_you: "Answered by <a href='{{userUrl}}'>you</a>"
+      sent_by_user: "Sent by <a href='{{userUrl}}'>{{user}}</a>"
+      sent_by_you: "Sent by <a href='{{userUrl}}'>you</a>"
+
+    directory:
+      filter_name: "filter by username"
+      title: "Users"
+      likes_given: "Given"
+      likes_received: "Received"
+      topics_entered: "Entered"
+      topics_entered_long: "Questions Entered"
+      time_read: "Time Read"
+      topic_count: "Questions"
+      topic_count_long: "Questions Created"
+      post_count: "Replies"
+      post_count_long: "Replies Posted"
+      no_results: "No results were found."
+      days_visited: "Visits"
+      days_visited_long: "Days Visited"
+      posts_read: "Read"
+      posts_read_long: "Answers Read"
+      total_rows:
+        one: "1 user"
+        other: "%{count} users"
+
+    user_action_groups:
+      "1": "Likes Given"
+      "2": "Likes Received"
+      "3": "Bookmarks"
+      "4": "Questions"
+      "5": "Replies"
+      "6": "Responses"
+      "7": "Mentions"
+      "9": "Quotes"
+      "10": "Starred"
+      "11": "Edits"
+      "12": "Sent Items"
+      "13": "Inbox"
+      "14": "Pending"
+
+    categories:
+      all: "all topics"
+      all_subcategories: "all"
+      no_subcategory: "none"
+      category: "Topic"
+      posts: "Answers"
+      topics: "Questions"
+      latest: "Latest"
+      latest_by: "latest by"
+      toggle_ordering: "toggle ordering control"
+      subcategories: "Subtopics"
+      topic_stats: "The number of new questions."
+      topic_stat_sentence:
+        one: "%{count} new question in the past %{unit}."
+        other: "%{count} new questions in the past %{unit}."
+      post_stats: "The number of new answers."
+      post_stat_sentence:
+        one: "%{count} new answer in the past %{unit}."
+        other: "%{count} new answers in the past %{unit}."
+
+    user:
+      said: "{{username}}:"
+      profile: "Profile"
+      mute: "Mute"
+      edit: "Edit Preferences"
+      download_archive: "Download My Posts"
+      new_private_message: "New Message"
+      private_message: "Message"
+      private_messages: "Messages"
+      activity_stream: "Activity"
+      preferences: "Preferences"
+      bookmarks: "Bookmarks"
+      bio: "About me"
+      invited_by: "Invited By"
+      trust_level: "Trust Level"
+      notifications: "Notifications"
+      dismiss_notifications: "Mark all as Read"
+      dismiss_notifications_tooltip: "Mark all unread notifications as read"
+      disable_jump_reply: "Don't jump to my answer after I reply"
+      dynamic_favicon: "Show new / updated question count on browser icon"
+      edit_history_public: "Let other users view my answer revisions"
+      external_links_in_new_tab: "Open all external links in a new tab"
+      enable_quoting: "Enable quote reply for highlighted text"
+      change: "change"
+      moderator: "{{user}} is a moderator"
+      admin: "{{user}} is an admin"
+      moderator_tooltip: "This user is a moderator"
+      admin_tooltip: "This user is an admin"
+      suspended_notice: "This user is suspended until {{date}}."
+      suspended_reason: "Reason: "
+      github_profile: "Github"
+      mailing_list_mode: "Send me an email for every new answer (unless I mute the question or topic)"
+      watched_categories: "Watched"
+      watched_categories_instructions: "You will automatically watch all new questions in these topics. You will be notified of all new answers and questions, plus the count of unread and new answers will also appear next to the questions's listing."
+      tracked_categories: "Tracked"
+      tracked_categories_instructions: "You will automatically track all new questions in these topics. A count of unread and new answers will appear next to the question."
+      muted_categories: "Muted"
+      muted_categories_instructions: "You will not be notified of anything about new questions in these topics, and they will not appear on your unread tab."
+      delete_account: "Delete My Account"
+      delete_account_confirm: "Are you sure you want to permanently delete your account? This action cannot be undone!"
+      deleted_yourself: "Your account has been deleted successfully."
+      delete_yourself_not_allowed: "You cannot delete your account right now. Contact an admin to do delete your account for you."
+      unread_message_count: "Messages"
+      admin_delete: "Delete"
+      users: "Users"
+      muted_users: "Muted"
+      muted_users_instructions: "Suppress all notifications from these users."
+
+      email_direct: "Send me an email when someone quotes me, replies to my post, mentions my @username, or invites me to a question"
+
+      categories_settings: "Topics"
+
+      new_topic_duration:
+        label: "Consider questions new when"
+
+      auto_track_topics: "Automatically track questions I ask"
+
+      stream:
+        posted_by: "Answered by"
+        sent_by: "Sent by"
+        private_message: "message"
+        the_topic: "the question"
+
+    too_few_topics_notice: "Create at least 5 public questions and %{posts} public replies to get discussion started. New users cannot earn trust levels unless there's content for them to read. This message appears only to staff."
+
+    year: 'year'
+    year_desc: 'questions created in the last 365 days'
+    month: 'month'
+    month_desc: 'questions created in the last 30 days'
+    week: 'week'
+    week_desc: 'questions created in the last 7 days'
+    day: 'day'
+
+    first_post: First post
+    mute: Mute
+    unmute: Unmute
+    last_post: Last post
+    last_reply_lowercase: last reply
+    replies_lowercase:
+      one: reply
+      other: replies
+
+    summary:
+      enabled_description: "You're viewing a summary of this question: the most interesting answers as determined by the community."
+      description: "There are <b>{{count}}</b> replies."
+      description_time: "There are <b>{{count}}</b> replies with an estimated read time of <b>{{readingTime}} minutes</b>."
+      enable: 'Summarize This Question'
+      disable: 'Show All Answers'
+
+    deleted_filter:
+      enabled_description: "This question contains deleted answers, which have been hidden. "
+      disabled_description: "Deleted answers in the topic are shown."
+      enable: "Hide Deleted Answers"
+      disable: "Show Deleted Answers"
+
+
+      add_warning: "This is an official warning."
+      posting_not_on_topic: "Which question do you want to reply to?"
+      saving_draft_tip: "saving..."
+      saved_draft_tip: "saved"
+      saved_local_draft_tip: "saved locally"
+      similar_topics: "Your question is similar to..."
+      drafts_offline: "drafts offline"
+
+      error:
+        title_missing: "Title is required"
+        title_too_short: "Title must be at least {{min}} characters"
+        title_too_long: "Title can't be more than {{max}} characters"
+        post_missing: "Answer can't be empty"
+        post_length: "Answer must be at least {{min}} characters"
+        try_like: 'Have you tried the <i class="fa fa-heart"></i> button?'
+        category_missing: "You must choose a topic"
+
+      save_edit: "Save Edit"
+      reply_original: "Reply on Original Question"
+      reply_here: "Reply Here"
+      reply: "Reply"
+      cancel: "Cancel"
+      create_topic: "Create Question"
+      create_pm: "Message"
+      title: "Or press Ctrl+Enter"
+
+      title_placeholder: "What is this question about in one brief sentence?"
+
+      admin_options_title: "Optional staff settings for this question"
+      auto_close:
+        label: "Auto-close question time:"
+        error: "Please enter a valid value."
+        based_on_last_post: "Don't close until the last answer in the topic is at least this old."
+        all:
+          units: ""
+          examples: 'Enter number of hours (24), absolute time (17:30) or timestamp (2013-11-22 14:00).'
+        limited:
+          units: "(# of hours)"
+          examples: 'Enter number of hours (24).'
+
+    notifications:
+      title: "notifications of @name mentions, replies to your answers and questions, messages, etc"
+      none: "Unable to load notifications at this time."
+      more: "view older notifications"
+      total_flagged: "total flagged answers"
+
+      popup:
+        mentioned: '{{username}} mentioned you in "{{topic}}" - {{site_title}}'
+        quoted: '{{username}} quoted you in "{{topic}}" - {{site_title}}'
+        replied: '{{username}} replied to you in "{{topic}}" - {{site_title}}'
+        posted: '{{username}} answered in "{{topic}}" - {{site_title}}'
+        private_message: '{{username}} sent you a private message in "{{topic}}" - {{site_title}}'
+        linked: '{{username}} linked to your answer from "{{topic}}" - {{site_title}}'
+
+    search:
+      title: "search questions, answers, users, or topics"
+
+      context:
+        user: "Search answers by @{{username}}"
+        category: "Search the \"{{category}}\" topic"
+        topic: "Search this question"
+        private_messages: "Search messages"
+
+    site_map: "go to another question list or topic"
+
+    topics:
+      bulk:
+        reset_read: "Reset Read"
+        delete: "Delete Questions"
+        dismiss_posts: "Dismiss Answers"
+        dismiss_posts_tooltip: "Clear unread counts on these questions but continue to show them on my unread list when new answers are made"
+        dismiss_topics: "Dismiss Questions"
+        dismiss_topics_tooltip: "Stop showing these questions in my unread list when new answers are made"
+        dismiss_new: "Dismiss New"
+        toggle: "toggle bulk selection of questions"
+        actions: "Bulk Actions"
+        change_category: "Change Topic"
+        close_topics: "Close Questions"
+        archive_topics: "Archive Questions"
+        notification_level: "Change Notification Level"
+        choose_new_category: "Choose the new topic for the questions:"
+        selected:
+          one: "You have selected <b>1</b> question."
+          other: "You have selected <b>{{count}}</b> questions."
+
+      none:
+        unread: "You have no unread questions."
+        new: "You have no new questions."
+        read: "You haven't read any questions yet."
+        posted: "You haven't replied to any questions yet."
+        latest: "There are no latest questions. That's sad."
+        hot: "There are no hot questions."
+        bookmarks: "You have no bookmarked questions yet."
+        category: "There are no {{category}} questions."
+        top: "There are no top questions."
+        search: "There are no search results."
+        educate:
+          new: '<p>Your new questions appear here.</p><p>By default, questions are considered new and will show a <span class="badge new-topic badge-notification" style="vertical-align:middle;line-height:inherit;">new</span> indicator if they were created in the last 2 days.</p><p>You can change this in your <a href="%{userPrefsUrl}">preferences</a>.</p>'
+          unread: '<p>Your unread questions appear here.</p><p>By default, questions are considered unread and will show unread counts <span class="badge new-posts badge-notification">1</span> if you:</p><ul><li>Created the question</li><li>Replied to the question</li><li>Read the question for more than 4 minutes</li></ul><p>Or if you have explicitly set the question to Tracked or Watched via the notification control at the bottom of each question.</p><p>You can change this in your <a href="%{userPrefsUrl}">preferences</a>.</p>'
+      bottom:
+        latest: "There are no more latest questions."
+        hot: "There are no more hot questions."
+        posted: "There are no more posted questions."
+        read: "There are no more read questions."
+        new: "There are no more new questions."
+        unread: "There are no more unread questions."
+        category: "There are no more {{category}} questions."
+        top: "There are no more top questions."
+        bookmarks: "There are no more bookmarked questions."
+        search: "There are no more search results."
+
+    topic:
+      filter_to: "{{post_count}} answers in question"
+      create: 'New Question'
+      create_long: 'Create a new Question'
+      private_message: 'Start a message'
+      list: 'Questions'
+      new: 'new question'
+      unread: 'unread'
+      new_topics:
+        one: '1 new question'
+        other: '{{count}} new questions'
+      unread_topics:
+        one: '1 unread question'
+        other: '{{count}} unread questions'
+      title: 'Question'
+      invalid_access:
+        title: "Question is private"
+        description: "Sorry, you don't have access to that question!"
+        login_required: "You need to log in to see that question."
+      server_error:
+        title: "Question failed to load"
+        description: "Sorry, we couldn't load that question, possibly due to a connection problem. Please try again. If the problem persists, let us know."
+      not_found:
+        title: "Question not found"
+        description: "Sorry, we couldn't find that question. Perhaps it was removed by a moderator?"
+      total_unread_posts:
+        one: "you have 1 unread answer in this question"
+        other: "you have {{count}} unread answers in this question"
+      unread_posts:
+        one: "you have 1 unread old answer in this question"
+        other: "you have {{count}} unread old answers in this question"
+      new_posts:
+        one: "there is 1 new answer in this question since you last read it"
+        other: "there are {{count}} new answers in this question since you last read it"
+
+      likes:
+        one: "there is 1 like in this question"
+        other: "there are {{count}} likes in this question"
+      back_to_list: "Back to Question List"
+      options: "Question Options"
+      show_links: "show links within this question"
+      toggle_information: "toggle question details"
+      read_more_in_category: "Want to read more? Browse other questions in {{catLink}} or {{latestLink}}."
+      read_more: "Want to read more? {{catLink}} or {{latestLink}}."
+
+      # keys ending with _MF use message format, see /spec/components/js_local_helper_spec.rb for samples
+      read_more_MF: "There {
+        UNREAD, plural,
+        =0 {}
+        one {
+          is <a href='/unread'>1 unread</a>
+        } other {
+          are <a href='/unread'># unread</a>
+        }
+        } {
+          NEW, plural,
+            =0 {}
+            one { {BOTH, select, true{and } false {is } other{}} <a href='/new'>1 new</a> topic}
+            other { {BOTH, select, true{and } false {are } other{}} <a href='/new'># new</a> topics}
+        } remaining, or {CATEGORY, select, true {browse other topics in {catLink}} false {{latestLink}} other {}}"
+
+      browse_all_categories: Browse all topics
+
+      view_latest_topics: view latest questions
+      suggest_create_topic: Why not ask a question?
+      jump_reply_up: jump to earlier reply
+      jump_reply_down: jump to later reply
+      deleted: "The question has been deleted"
+
+      auto_close_notice: "This question will automatically close %{timeLeft}."
+      auto_close_notice_based_on_last_post: "This question will close %{duration} after the last reply."
+      auto_close_title: 'Auto-Close Settings'
+      auto_close_save: "Save"
+      auto_close_remove: "Don't Auto-Close This Question"
+
+      progress:
+        title: question progress
+        go_top: "top"
+        go_bottom: "bottom"
+        go: "go"
+        jump_bottom: "jump to last answer"
+        jump_bottom_with_number: "jump to answer %{post_number}"
+        total: total answers
+        current: current answer
+        position: "answer %{current} of %{total}"
+
+      notifications:
+        reasons:
+          "3_6": 'You will receive notifications because you are watching this topic.'
+          "3_5": 'You will receive notifications because you started watching this question automatically.'
+          "3_2": 'You will receive notifications because you are watching this question.'
+          "3_1": 'You will receive notifications because you created this question.'
+          "3": 'You will receive notifications because you are watching this question.'
+          "2_8": 'You will receive notifications because you are tracking this topic.'
+          "2_4": 'You will receive notifications because you posted a reply to this question.'
+          "2_2": 'You will receive notifications because you are tracking this question.'
+          "2": 'You will receive notifications because you <a href="/users/{{username}}/preferences">read this question</a>.'
+          "1_2": 'You will be notified if someone mentions your @name or replies to your answer.'
+          "1": 'You will be notified if someone mentions your @name or replies to your answer.'
+          "0_7": 'You are ignoring all notifications in this topic.'
+          "0_2": 'You are ignoring all notifications on this question.'
+          "0": 'You are ignoring all notifications on this question.'
+        watching_pm:
+          title: "Watching"
+          description: "You will be notified of every new answer in this message. A count of unread and new answers will also appear next to the question."
+        watching:
+          title: "Watching"
+          description: "You will be notified of every new answer in this question. A count of unread and new answers will also appear next to the question."
+        tracking_pm:
+          title: "Tracking"
+          description: "A count of unread and new answers will appear next to the message. You will be notified if someone mentions your @name or replies to your answer."
+        tracking:
+          title: "Tracking"
+          description: "A count of unread and new answers will appear next to the question. You will be notified if someone mentions your @name or replies to your answer. "
+        regular:
+          title: "Regular"
+          description: "You will be notified if someone mentions your @name or replies to your answer."
+        regular_pm:
+          title: "Regular"
+          description: "You will be notified if someone mentions your @name or replies to your answer in the message."
+        muted_pm:
+          title: "Muted"
+          description: "You will never be notified of anything about this message."
+        muted:
+          title: "Muted"
+          description: "You will never be notified of anything about this question, and it will not appear on your unread tab."
+
+      actions:
+        recover: "Un-Delete Question"
+        delete: "Delete Question"
+        open: "Open Question"
+        close: "Close Question"
+        multi_select: "Select Answers…"
+        auto_close: "Auto Close…"
+        pin: "Pin Question…"
+        unpin: "Un-Pin Question…"
+        unarchive: "Unarchive Question"
+        archive: "Archive Question"
+        invisible: "Make Unlisted"
+        visible: "Make Listed"
+        reset_read: "Reset Read Data"
+
+      feature:
+        pin: "Pin Question"
+        unpin: "Un-Pin Question"
+        pin_globally: "Pin Question Globally"
+        make_banner: "Banner Question"
+        remove_banner: "Remove Banner Question"
+
+      reply:
+        title: 'Reply'
+        help: 'begin composing a reply to this question'
+
+      clear_pin:
+        title: "Clear pin"
+        help: "Clear the pinned status of this question so it no longer appears at the top of your question list"
+
+      share:
+        title: 'Share'
+        help: 'share a link to this question'
+
+      flag_topic:
+        title: 'Flag'
+        help: 'privately flag this question for attention or send a private notification about it'
+        success_message: 'You successfully flagged this question.'
+
+      feature_topic:
+        title: "Feature this question"
+        pin: "Make this question appear at the top of the {{categoryLink}} topic."
+        confirm_pin: "You already have {{count}} pinned questions. Too many pinned questions may be a burden for new and anonymous users. Are you sure you want to pin another question in this topic?"
+        unpin: "Remove this question from the top of the {{categoryLink}} topic."
+        pin_note: "Users can unpin the question individually for themselves."
+        already_pinned:
+          zero: "There are no questions pinned in {{categoryLink}}."
+          one: "questions currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>1</strong>."
+          other: "questions currently pinned in {{categoryLink}}: <strong class='badge badge-notification unread'>{{count}}</strong>."
+        pin_globally: "Make this question appear at the top of all question lists, until a staff member unpins it."
+        confirm_pin_globally: "You already have {{count}} globally pinned questions. Too many pinned questions may be a burden for new and anonymous users. Are you sure you want to pin another question globally?"
+        unpin_globally: "Remove this question from the top of all question lists."
+        global_pin_note: "Users can unpin the question individually for themselves."
+        already_pinned_globally:
+          zero: "There are no questions pinned globally."
+          one: "Questions currently pinned globally: <strong class='badge badge-notification unread'>1</strong>."
+          other: "Questions currently pinned globally: <strong class='badge badge-notification unread'>{{count}}</strong>."
+        make_banner: "Make this question into a banner that appears at the top of all pages."
+        remove_banner: "Remove the banner that appears at the top of all pages."
+        banner_note: "Users can dismiss the banner by closing it. Only one question can be bannered at any given time."
+        already_banner:
+          zero: "There is no banner question."
+          one: "There <strong class='badge badge-notification unread'>is</strong> currently a banner question."
+
+      invite_reply:
+        title: 'Invite'
+        username_placeholder: "username"
+        action: 'Send Invite'
+        help: 'invite others to this question via email or notifications'
+        to_forum: "We'll send a brief email allowing your friend to immediately join by clicking a link, no login required."
+        sso_enabled: "Enter the username of the person you'd like to invite to this question."
+        to_topic_blank: "Enter the username or email address of the person you'd like to invite to this question."
+        to_topic_email: "You've entered an email address. We'll email an invitation that allows your friend to immediately reply to this question."
+        to_topic_username: "You've entered a username. We'll send a notification to that user with a link inviting them to this question."
+        to_username: "Enter the username of the person you'd like to invite. We'll send a notification to that user with a link inviting them to this question."
+
+        email_placeholder: 'name@example.com'
+        success_email: "We mailed out an invitation to <b>{{emailOrUsername}}</b>. We'll notify you when the invitation is redeemed. Check the invitations tab on your user page to keep track of your invites."
+        success_username: "We've invited that user to participate in this question."
+        error: "Sorry, we couldn't invite that person. Perhaps they have already been invited? (Invites are rate limited)"
+
+      filters:
+        n_posts:
+          one: "1 reply"
+          other: "{{count}} replies"
+        cancel: "Remove filter"
+
+      split_topic:
+        title: "Move to New Question"
+        action: "move to new question"
+        topic_name: "New Question Name"
+        error: "There was an error moving answers to the new question."
+        instructions:
+          one: "You are about to create a new question and populate it with the answer you've selected."
+          other: "You are about to create a new question and populate it with the <b>{{count}}</b> answers you've selected."
+
+      merge_topic:
+        title: "Move to Existing Question"
+        action: "move to existing question"
+        error: "There was an error moving answers into that question."
+        instructions:
+          one: "Please choose the question you'd like to move that answer to."
+          other: "Please choose the question you'd like to move those <b>{{count}}</b> answers to."
+
+      change_owner:
+        title: "Change Owner of Answers"
+        action: "change ownership"
+        error: "There was an error changing the ownership of the answers."
+        label: "New Owner of Answers"
+        placeholder: "username of new owner"
+        instructions:
+          one: "Please choose the new owner of the answer by <b>{{old_user}}</b>."
+          other: "Please choose the new owner of the {{count}} answers by <b>{{old_user}}</b>."
+        instructions_warn: "Note that any notifications about this answer will not be transferred to the new user retroactively.<br>Warning: Currently, no answer-dependent data is transferred over to the new user. Use with caution."
+
+      multi_select:
+        select: 'select'
+        selected: 'selected ({{count}})'
+        select_replies: 'select +replies'
+        delete: delete selected
+        cancel: cancel selecting
+        select_all: select all
+        deselect_all: deselect all
+        description:
+          one: You have selected <b>1</b> answer.
+          other: "You have selected <b>{{count}}</b> answers."
+
+    post:
+      reply: "Replying to {{link}} {{replyAvatar}} {{username}}"
+      reply_topic: "Reply to {{link}}"
+      quote_reply: "quote reply"
+      edit: "Editing {{link}} {{replyAvatar}} {{username}}"
+      edit_reason: "Reason: "
+      post_number: "answer {{number}}"
+      last_edited_on: "answer last edited on"
+      reply_as_new_topic: "Reply as linked Question"
+      continue_discussion: "Continuing the discussion from {{postLink}}:"
+      follow_quote: "go to the quoted answer"
+      show_full: "Show Full Answer"
+      show_hidden: 'View hidden content.'
+      deleted_by_author:
+        one: "(answer withdrawn by author, will be automatically deleted in %{count} hour unless flagged)"
+        other: "(answer withdrawn by author, will be automatically deleted in %{count} hours unless flagged)"
+      expand_collapse: "expand/collapse"
+      gap:
+        one: "view 1 hidden reply"
+        other: "view {{count}} hidden replies"
+      more_links: "{{count}} more..."
+
+      unread: "Answer is unread"
+      has_replies:
+        one: "Reply"
+        other: "Replies"
+
+      errors:
+        create: "Sorry, there was an error creating your answer. Please try again."
+        edit: "Sorry, there was an error editing your answer. Please try again."
+        upload: "Sorry, there was an error uploading that file. Please try again."
+        attachment_too_large: "Sorry, the file you are trying to upload is too big (maximum size is {{max_size_kb}}kb)."
+        file_too_large: "Sorry, the file you are trying to upload is too big (maximum size is {{max_size_kb}}kb)"
+        too_many_uploads: "Sorry, you can only upload one file at a time."
+        too_many_dragged_and_dropped_files: "Sorry, you can only drag & drop up to 10 files at a time."
+        upload_not_authorized: "Sorry, the file you are trying to upload is not authorized (authorized extension: {{authorized_extensions}})."
+        image_upload_not_allowed_for_new_user: "Sorry, new users can not upload images."
+        attachment_upload_not_allowed_for_new_user: "Sorry, new users can not upload attachments."
+        attachment_download_requires_login: "Sorry, you need to be logged in to download attachments."
+
+      abandon:
+        confirm: "Are you sure you want to abandon your answer?"
+        no_value: "No, keep"
+        yes_value: "Yes, abandon"
+
+      via_email: "this answer arrived via email"
+
+      wiki:
+        about: "this answer is a wiki; basic users can edit it"
+
+      controls:
+        reply: "begin composing a reply to this answer"
+        like: "like this answer"
+        has_liked: "you've liked this answer"
+        undo_like: "undo like"
+        edit: "edit this answer"
+        edit_anonymous: "Sorry, but you need to be logged in to edit this answer."
+        flag: "privately flag this answer for attention or send a private notification about it"
+        delete: "delete this answer"
+        undelete: "undelete this answer"
+        share: "share a link to this answer"
+        more: "More"
+        delete_replies:
+          confirm:
+            one: "Do you also want to delete the direct reply to this answer?"
+            other: "Do you also want to delete the {{count}} direct replies to this answer?"
+          yes_value: "Yes, delete the replies too"
+          no_value: "No, just this answer"
+        admin: "answer admin actions"
+
+        by_you:
+          off_topic: "You flagged this as off-topic"
+          spam: "You flagged this as spam"
+          inappropriate: "You flagged this as inappropriate"
+          notify_moderators: "You flagged this for moderation"
+          notify_user: "You sent a message to this user"
+          bookmark: "You bookmarked this answer"
+          like: "You liked this"
+          vote: "You voted for this answer"
+        by_you_and_others:
+          off_topic:
+            one: "You and 1 other flagged this as off-topic"
+            other: "You and {{count}} other people flagged this as off-topic"
+          spam:
+            one: "You and 1 other flagged this as spam"
+            other: "You and {{count}} other people flagged this as spam"
+          inappropriate:
+            one: "You and 1 other flagged this as inappropriate"
+            other: "You and {{count}} other people flagged this as inappropriate"
+          notify_moderators:
+            one: "You and 1 other flagged this for moderation"
+            other: "You and {{count}} other people flagged this for moderation"
+          notify_user:
+            one: "You and 1 other sent a message to this user"
+            other: "You and {{count}} other people sent a message to this user"
+          bookmark:
+            one: "You and 1 other bookmarked this answer"
+            other: "You and {{count}} other people bookmarked this answer"
+          like:
+            one: "You and 1 other liked this"
+            other: "You and {{count}} other people liked this"
+          vote:
+            one: "You and 1 other voted for this answer"
+            other: "You and {{count}} other people voted for this answer"
+        by_others:
+          off_topic:
+            one: "1 person flagged this as off-topic"
+            other: "{{count}} people flagged this as off-topic"
+          spam:
+            one: "1 person flagged this as spam"
+            other: "{{count}} people flagged this as spam"
+          inappropriate:
+            one: "1 person flagged this as inappropriate"
+            other: "{{count}} people flagged this as inappropriate"
+          notify_moderators:
+            one: "1 person flagged this for moderation"
+            other: "{{count}} people flagged this for moderation"
+          notify_user:
+            one: "1 person sent a message to this user"
+            other: "{{count}} sent a message to this user"
+          bookmark:
+            one: "1 person bookmarked this answer"
+            other: "{{count}} people bookmarked this answer"
+          like:
+            one: "1 person liked this"
+            other: "{{count}} people liked this"
+          vote:
+            one: "1 person voted for this answer"
+            other: "{{count}} people voted for this answer"
+
+      delete:
+        confirm:
+          one: "Are you sure you want to delete that answer?"
+          other: "Are you sure you want to delete all those answers?"
+
+    category:
+      can: 'can&hellip; '
+      none: '(no topic)'
+      choose: 'Select a topic&hellip;'
+      edit: 'edit'
+      edit_long: "Edit"
+      view: 'View Questions in Topic'
+      general: 'General'
+      settings: 'Settings'
+      delete: 'Delete Topic'
+      create: 'New Topic'
+      save: 'Save Topic'
+      slug: 'Topic Slug'
+      slug_placeholder: '(Optional) dashed-words for url'
+      creation_error: There has been an error during the creation of the Topic.
+      save_error: There was an error saving the Topic.
+      name: "Topic Name"
+      description: "Description"
+      topic: "Topic question"
+      logo: "Topic Logo Image"
+      background_image: "Topic Background Image"
+      badge_colors: "Badge colors"
+      background_color: "Background color"
+      foreground_color: "Foreground color"
+      name_placeholder: "One or two words maximum"
+      color_placeholder: "Any web color"
+      delete_confirm: "Are you sure you want to delete this topic?"
+      delete_error: "There was an error deleting the topic."
+      list: "List Categories"
+      no_description: "Please add a description for this topic."
+      change_in_category_topic: "Edit Description"
+      already_used: 'This color has been used by another topic'
+      security: "Security"
+      images: "Images"
+      auto_close_label: "Auto-close questions after:"
+      auto_close_units: "hours"
+      email_in: "Custom incoming email address:"
+      email_in_allow_strangers: "Accept emails from anonymous users with no accounts"
+      email_in_disabled: "Posting new questions via email is disabled in the Site Settings. To enable posting new questions via email, "
+      email_in_disabled_click: 'enable the "email in" setting.'
+      allow_badges_label: "Allow badges to be awarded in this topic"
+      edit_permissions: "Edit Permissions"
+      add_permission: "Add Permission"
+      this_year: "this year"
+      position: "position"
+      default_position: "Default Position"
+      position_disabled: "Topics will be displayed in order of activity. To control the order of topics in lists, "
+      position_disabled_click: 'enable the "fixed topic positions" setting.'
+      parent: "Parent Topic"
+      notifications:
+        title: ''
+        reasons:
+        watching:
+          title: "Watching"
+          description: "You will automatically watch all new questions in these topics. You will be notified of all new answers and questions, plus the count of unread and new answers will also appear next to the topic."
+        tracking:
+          title: "Tracking"
+          description: "You will automatically track all new questions in these topics. A count of unread and new answers will appear next to the topic."
+        regular:
+          title: "Regular"
+          description: "You will be notified if someone mentions your @name or replies to your answer."
+        muted:
+          title: "Muted"
+          description: "You will not be notified of anything about new questions in these topics, and they will not appear on your unread tab."
+
+    flagging:
+      title: 'Thanks for helping to keep our community civil!'
+      private_reminder: 'flags are private, <b>only</b> visible to staff'
+      action: 'Flag Answer'
+      take_action: "Take Action"
+      notify_action: 'Message'
+      delete_spammer: "Delete Spammer"
+      delete_confirm: "You are about to delete <b>%{posts}</b> answers and <b>%{topics}</b> questions from this user, remove their account, block signups from their IP address <b>%{ip_address}</b>, and add their email address <b>%{email}</b> to a permanent block list. Are you sure this user is really a spammer?"
+      yes_delete_spammer: "Yes, Delete Spammer"
+      ip_address_missing: "(N/A)"
+      hidden_email_address: "(hidden)"
+      submit_tooltip: "Submit the private flag"
+      take_action_tooltip: "Reach the flag threshold immediately, rather than waiting for more community flags"
+      cant: "Sorry, you can't flag this answer at this time."
+      formatted_name:
+        off_topic: "It's Off-Topic"
+        inappropriate: "It's Inappropriate"
+        spam: "It's Spam"
+      custom_placeholder_notify_user: "Be specific, be constructive, and always be kind."
+      custom_placeholder_notify_moderators: "Let us know specifically what you are concerned about, and provide relevant links and examples where possible."
+      custom_message:
+        at_least: "enter at least {{n}} characters"
+        more: "{{n}} to go..."
+        left: "{{n}} remaining"
+
+    flagging_topic:
+      title: "Thanks for helping to keep our community civil!"
+      action: "Flag Question"
+      notify_action: "Message"
+
+    topic_map:
+      title: "Question Summary"
+      participants_title: "Frequent Posters"
+      links_title: "Popular Links"
+      links_shown: "show all {{totalLinks}} links..."
+      clicks:
+        one: "1 click"
+        other: "%{count} clicks"
+
+    topic_statuses:
+      warning:
+        help: "This is an official warning."
+      bookmarked:
+        help: "You bookmarked this question"
+      locked:
+        help: "This question is closed; it no longer accepts new replies"
+      archived:
+        help: "This question is archived; it no longer accepts new replies"
+      unpinned:
+        title: "Unpinned"
+        help: "This question is unpinned for you; it will display in regular order"
+      pinned_globally:
+        title: "Pinned Globally"
+        help: "This question is pinned globally; it will display at the top of all lists"
+      pinned:
+        title: "Pinned"
+        help: "This question is pinned for you; it will display at the top of its category"
+      archived:
+        help: "This question is archived; it is frozen and cannot be changed"
+      invisible:
+        help: "This question is unlisted; it will not be displayed in question lists, and can only be accessed via a direct link"
+
+    posts: "Answers"
+    posts_lowercase: "answers"
+    posts_long: "there are {{number}} answers in this question"
+    posts_likes_MF: |
+      This question has {count, plural, one {1 reply} other {# replies}} {ratio, select,
+        low {with a high like to post ratio}
+        med {with a very high like to post ratio}
+        high {with an extremely high like to post ratio}
+        other {}}
+    original_post: "Original Answer"
+    views: "Views"
+    views_lowercase:
+      one: "view"
+      other: "views"
+    replies: "Replies"
+    views_long: "this question has been viewed {{number}} times"
+    activity: "Activity"
+    likes: "Likes"
+    likes_lowercase:
+      one: "like"
+      other: "likes"
+    likes_long: "there are {{number}} likes in this question"
+    users: "Users"
+    users_lowercase:
+      one: "user"
+      other: "users"
+    category_title: "Topic"
+    history: "History"
+    changed_by: "by {{author}}"
+
+    raw_email:
+      title: "Raw Email"
+      not_available: "Not available!"
+
+    categories_list: "Topics List"
+
+    filters:
+      with_topics: "%{filter} questions"
+      with_category: "%{filter} %{category} questions"
+      latest:
+        title: "Latest"
+        help: "questions with recent posts"
+      hot:
+        title: "Hot"
+        help: "a selection of the hottest questions"
+      read:
+        title: "Read"
+        help: "questions you've read, in the order that you last read them"
+      search:
+        title: "Search"
+        help: "search all questions"
+      categories:
+        title: "Categories"
+        title_in: "Category - {{categoryName}}"
+        help: "all questions grouped by category"
+      unread:
+        title:
+          zero: "Unread"
+          one: "Unread (1)"
+          other: "Unread ({{count}})"
+        help: "questions you are currently watching or tracking with unread posts"
+        lower_title_with_count:
+          zero: ""
+          one: "1 unread"
+          other: "{{count}} unread"
+      new:
+        lower_title_with_count:
+          zero: ""
+          one: "1 new"
+          other: "{{count}} new"
+        lower_title: "new"
+        title:
+          zero: "New"
+          one: "New (1)"
+          other: "New ({{count}})"
+        help: "questions created in the last few days"
+      posted:
+        title: "My Answers"
+        help: "questions you have answered in"
+      bookmarks:
+        title: "Bookmarks"
+        help: "questions you have bookmarked"
+      category:
+        title:
+          zero: "{{categoryName}}"
+          one: "{{categoryName}} (1)"
+          other: "{{categoryName}} ({{count}})"
+        help: "latest questions in the {{categoryName}} topic"
+      top:
+        title: "Top"
+        help: "the most active questions in the last year, month, week or day"
+        all:
+          title: "All Time"
+        yearly:
+          title: "Yearly"
+        monthly:
+          title: "Monthly"
+        weekly:
+          title: "Weekly"
+        daily:
+          title: "Daily"
+        all_time: "All Time"
+        this_year: "This year"
+        this_month: "This month"
+        this_week: "This week"
+        today: "Today"
+        other_periods: "see top"
+
+    browser_update: 'Unfortunately, <a href="http://www.discourse.org/faq/#browser">your browser is too old to work on this site</a>. Please <a href="http://browsehappy.com">upgrade your browser</a>.'
+
+        agree: "Agree"
+        agree_title: "Confirm this flag as valid and correct"
+        agree_flag_modal_title: "Agree and..."
+        agree_flag_hide_post: "Agree (hide answer + send PM)"
+        agree_flag_hide_post_title: "Hide this answer and automatically send the user a message urging them to edit it"
+        agree_flag_restore_post: "Agree (restore answer)"
+        agree_flag_restore_post_title: "Restore this answer"
+        agree_flag: "Agree with flag"
+        agree_flag_title: "Agree with flag and keep the answer unchanged"
+        defer_flag: "Defer"
+        defer_flag_title: "Remove this flag; it requires no action at this time."
+        delete: "Delete"
+        delete_title: "Delete the answer this flag refers to."
+        delete_post_defer_flag: "Delete answer and Defer flag"
+        delete_post_defer_flag_title: "Delete answer; if the first answer, delete the question"
+        delete_post_agree_flag: "Delete answer and Agree with flag"
+        delete_post_agree_flag_title: "Delete answer; if the first answer, delete the question"
+        delete_flag_modal_title: "Delete and..."
+        delete_spammer: "Delete Spammer"
+        delete_spammer_title: "Remove the user and all answers and questions by this user."
+        disagree_flag_unhide_post: "Disagree (unhide answer)"
+        disagree_flag_unhide_post_title: "Remove any flags from this answer and make the answer visible again"
+        disagree_flag: "Disagree"
+        disagree_flag_title: "Deny this flag as invalid or incorrect"
+        clear_topic_flags: "Done"
+        clear_topic_flags_title: "The question has been investigated and issues have been resolved. Click Done to remove the flags."
+        more: "(more replies...)"
+
+        flagged_by: "Flagged by"
+        resolved_by: "Resolved by"
+        took_action: "Took action"
+        system: "System"
+        error: "Something went wrong"
+        reply_message: "Reply"
+        no_results: "There are no flags."
+        topic_flagged: "This <strong>question</strong> has been flagged."
+        visit_topic: "Visit the question to take action"
+        was_edited: "Answer was edited after the first flag"
+        previous_flags_count: "This answer has already been flagged {{count}} times."
+
+      export_csv:
+        user_archive_confirm: "Are you sure you want to download your answers?"
+        success: "Export initiated, you will be notified via message when the process is complete."
+        failed: "Export failed. Please check the logs."
+        rate_limit_error: "Answers can be downloaded once per day, please try again tomorrow."
+        button_text: "Export"
+        button_title:
+          user: "Export full user list in CSV format."
+          staff_action: "Export full staff action log in CSV format."
+          screened_email: "Export full screened email list in CSV format."
+          screened_ip: "Export full screened IP list in CSV format."
+          screened_url: "Export full screened URL list in CSV format."
+
+
+    keyboard_shortcuts_help:
+      title: 'Keyboard Shortcuts'
+      jump_to:
+        title: 'Jump To'
+        home: '<b>g</b>, <b>h</b> Home'
+        latest: '<b>g</b>, <b>l</b> Latest'
+        new: '<b>g</b>, <b>n</b> New'
+        unread: '<b>g</b>, <b>u</b> Unread'
+        categories: '<b>g</b>, <b>c</b> Topics'
+        top: '<b>g</b>, <b>t</b> Top'
+        bookmarks: '<b>g</b>, <b>b</b> Bookmarks'
+      navigation:
+        title: 'Navigation'
+        jump: '<b>#</b> Go to answer #'
+        back: '<b>u</b> Back'
+        up_down: '<b>k</b>/<b>j</b> Move selection &uarr; &darr;'
+        open: '<b>o</b> or <b>Enter</b> Open selected question'
+        next_prev: '<b>shift</b>+<b>j</b>/<b>shift</b>+<b>k</b> Next/previous section'
+      application:
+        title: 'Application'
+        create: '<b>c</b> Create a new question'
+        notifications: '<b>n</b> Open notifications'
+        site_map_menu: '<b>=</b> Open site menu'
+        user_profile_menu: '<b>p</b> Open user menu'
+        show_incoming_updated_topics: '<b>.</b> Show updated questions'
+        search: '<b>/</b> Search'
+        help: '<b>?</b> Open keyboard help'
+        dismiss_new_posts: '<b>x</b>, <b>r</b> Dismiss New/Answers'
+        dismiss_topics: '<b>x</b>, <b>t</b> Dismiss Questions'
+      actions:
+        title: 'Actions'
+        bookmark_topic: '<b>f</b> Toggle bookmark question'
+        pin_unpin_topic: '<b>shift</b>+<b>p</b> Pin/Unpin question'
+        share_topic: '<b>shift</b>+<b>s</b> Share question'
+        share_post: '<b>s</b> Share answer'
+        reply_as_new_topic: '<b>t</b> Reply as linked question'
+        reply_topic: '<b>shift</b>+<b>r</b> Reply to question'
+        reply_post: '<b>r</b> Reply to answer'
+        quote_post: '<b>q</b> Quote answer'
+        like: '<b>l</b> Like answer'
+        flag: '<b>!</b> Flag answer'
+        bookmark: '<b>b</b> Bookmark answer'
+        edit: '<b>e</b> Edit answer'
+        delete: '<b>d</b> Delete answer'
+        mark_muted: '<b>m</b>, <b>m</b> Mute question'
+        mark_regular: '<b>m</b>, <b>r</b> Regular (default) question'
+        mark_tracking: '<b>m</b>, <b>t</b> Track question'
+        mark_watching: '<b>m</b>, <b>w</b> Watch question'
+
+    badges:
+      title: Badges
+      allow_title: "can be used as a title"
+      multiple_grant: "can be awarded multiple times"
+      badge_count:
+        one:   "1 Badge"
+        other: "%{count} Badges"
+      more_badges:
+        one:   "+1 More"
+        other: "+%{count} More"
+      granted:
+        one:   "1 granted"
+        other: "%{count} granted"
+      select_badge_for_title: Select a badge to use as your title
+      none: "<none>"
+      badge_grouping:
+        getting_started:
+          name: Getting Started
+        community:
+          name: Community
+        trust_level:
+          name: Trust Level
+        other:
+          name: Other
+        posting:
+          name: Posting
+      badge:
+        editor:
+          name: Editor
+          description: First answer edit
+        basic_user:
+          name: Basic
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/4">Granted</a> all essential community functions
+        member:
+          name: Member
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/5">Granted</a> invitations
+        regular:
+          name: Regular
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/6">Granted</a> recategorize, rename, followed links and lounge
+        leader:
+          name: Leader
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/7">Granted</a> global edit, pin, close, archive, split and merge
+        welcome:
+          name: Welcome
+          description: Received a like
+        autobiographer:
+          name: Autobiographer
+          description: Filled user <a href="/my/preferences">profile</a> information
+        anniversary:
+          name: Anniversary
+          description: Active member for a year, answered at least once
+        nice_post:
+          name: Nice Post
+          description: Received 10 likes on an answer. This badge can be granted multiple times
+        good_post:
+          name: Good Post
+          description: Received 25 likes on an answer. This badge can be granted multiple times
+        great_post:
+          name: Great Post
+          description: Received 50 likes on an answer. This badge can be granted multiple times
+        nice_topic:
+          name: Nice Topic
+          description: Received 10 likes on a question. This badge can be granted multiple times
+        good_topic:
+          name: Good Topic
+          description: Received 25 likes on a question. This badge can be granted multiple times
+        great_topic:
+          name: Great Topic
+          description: Received 50 likes on a question. This badge can be granted multiple times
+        nice_share:
+          name: Nice Share
+          description: Shared an answer with 25 unique visitors
+        good_share:
+          name: Good Share
+          description: Shared an answer with 300 unique visitors
+        great_share:
+          name: Great Share
+          description: Shared an answer with 1000 unique visitors
+        first_like:
+          name: First Like
+          description: Liked an answer
+        first_flag:
+          name: First Flag
+          description: Flagged an answer
+        promoter:
+          name: Promoter
+          description: Invited a user
+        campaigner:
+          name: Campaigner
+          description: Invited 3 members
+        champion:
+          name: Champion
+          description: Invited 10 members
+        first_share:
+          name: First Share
+          description: Shared an answer
+        first_link:
+          name: First Link
+          description: Added an internal link to another question
+        first_quote:
+          name: First Quote
+          description: Quoted a user
+        read_guidelines:
+          name: Read Guidelines
+          description: Read the <a href="/guidelines">community guidelines</a>
+        reader:
+          name: Reader
+          description: Read every post in a question with more than 100 posts
+
+    google_search: |
+      <h2>Search with Google</h2>
+      <p>
+        <form action='//google.com/search' id='google-search' onsubmit="document.getElementById('google-query').value = 'site:' + window.location.host + ' ' + document.getElementById('user-query').value; return true;">
+          <input type="text" id='user-query' value="">
+          <input type='hidden' id='google-query' name="q">
+          <button class="btn btn-primary">Google</button>
+        </form>
+      </p>
