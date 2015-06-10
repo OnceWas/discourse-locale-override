@@ -1,0 +1,5 @@
+en:
+  reports:
+    top_referrers:
+      title: "Top Referrers (en OVERRIDE TEST)"
+      num_clicks: "Clicks"
