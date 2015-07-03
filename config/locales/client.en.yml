@@ -16,6 +16,7 @@ en:
     topic_admin_menu: "question admin actions"
 
     edit: 'edit the title and topic of this question'
+    sign_up: "Join Us"
 
     suggested_topics:
       title: "Suggested Questions"
